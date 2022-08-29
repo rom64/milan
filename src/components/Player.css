@@ -1,0 +1,72 @@
+
+.player{
+    font-size: 1.25rem;
+    position: relative;
+}
+.player button{
+    width: 35px;
+    margin: 3px;
+}
+.player-label{
+    margin-left: 1.25rem;
+    line-height: 35px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.player.important .player-label{
+    font-weight: bold;
+    color: #DC3545;
+    text-shadow: 1px 1px 1px black;
+}
+.player.injured .player-label{
+    text-decoration: line-through;
+    text-shadow: 1px 1px 5px black;
+    color: black;
+}
+.float-right{
+    float: right;
+}
+
+.keeper:after{
+    font:  normal 14px/1 FontAwesome;
+    content: "\f2a7";
+    position: absolute;
+    right: -24px;
+    top: calc(50% - 6px);
+    font-weight: bold ;
+    font-size: 16px;
+    opacity: 0.8;
+}
+.defender:after{
+    font:  normal 14px/1 FontAwesome;
+    content: '\f132';
+    position: absolute;
+    right: -24px;
+    top: calc(50% - 6px);
+    font-weight: bold ;
+    font-size: 16px;
+    opacity: 0.8;
+}
+.midfielder:after{
+    font:  normal 14px/1 FontAwesome;
+    content: '\f183';
+    position: absolute;
+    right: -24px;
+    top: calc(50% - 6px);
+    font-weight: bold ;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.forward:after{
+    font:  normal 14px/1 FontAwesome;
+    content: '\f1e3';
+    position: absolute;
+    right: -24px;
+    top: calc(50% - 6px);
+    font-weight: bold ;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
