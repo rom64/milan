@@ -11,19 +11,20 @@ import './App.css';
 
 const App = () => {
     const [players, setPlayers] = useState([
-        { label:'Mike Maignan', important: true, injured: false, keeper: true, defender: false, midfielder: false, forward: false, id: 1 } ,
-        { label:'Davide Calabria', important: true, injured: false, keeper: false, defender: true, midfielder: false, forward: false, id: 2 } ,
-        { label:'Zlatan Ibrahimovic', important: true, injured: false, keeper: false, defender: false, midfielder: false, forward: true, id: 3 } ,
-        { label:'Sandro Tonali', important: true, injured: false, keeper: false, defender: false, midfielder: true, forward: false, id: 4 } ,
-        { label:'Rade Krunic', important: false, injured: false, keeper: false, defender: false, midfielder: false, forward: false, id: 5 } ,
+        { label:'Mike Maignan', number: 16, important: true, injured: false, keeper: true, defender: false, midfielder: false, forward: false, id: 1 } ,
+        { label:'Davide Calabria', number: 2, important: true, injured: false, keeper: false, defender: true, midfielder: false, forward: false, id: 2 } ,
+        { label:'Zlatan Ibrahimovic', number: 11, important: true, injured: false, keeper: false, defender: false, midfielder: false, forward: true, id: 3 } ,
+        { label:'Sandro Tonali', number: 8, important: true, injured: false, keeper: false, defender: false, midfielder: true, forward: false, id: 4 } ,
+        { label:'Rade Krunic', number: 33, important: false, injured: false, keeper: false, defender: false, midfielder: false, forward: false, id: 5 } ,
          ]);
 
     const [term, setTerm] = useState('');
     const [filter, setFilter] = useState('all');
 
-    const createPlayer = ( label ) => {
+    const createPlayer = ( label, number ) => {
         return {
             label,
+            number,
             important:  false,
             injured:    false,
             keeper:     false,
@@ -37,8 +38,8 @@ const App = () => {
         const newArr = players.filter( item => item.id !== id );
         setPlayers( newArr );
     }
-    const addItem = ( text ) => {
-        const newItem = createPlayer( text );
+    const addItem = ( text, number ) => {
+        const newItem = createPlayer( text, number );
         const newData = [...players, newItem];
         setPlayers( newData );
 

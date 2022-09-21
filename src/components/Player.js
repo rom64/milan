@@ -1,7 +1,7 @@
 import './Player.css';
 
 
- const Player = ({ label, onDeleted, onToggleImportant, onToggleInjured, important, injured, onToggleDefender, onToggleForward, onToggleKeeper, onToggleMidfielder, keeper, defender, midfielder, forward }) =>{
+ const Player = ({ label, number, onDeleted, onToggleImportant, onToggleInjured, important, injured, onToggleDefender, onToggleForward, onToggleKeeper, onToggleMidfielder, keeper, defender, midfielder, forward }) =>{
 
 
         let classNames = `player`;
@@ -34,7 +34,7 @@ import './Player.css';
                     className='player-label'
                     onClick={ onToggleInjured }
                 >
-                    { label }
+                    { `${number} ${label}` }
                 </span>
                  <button type='button'
                          className='btn btn-outline-danger btn-sm  float-right'

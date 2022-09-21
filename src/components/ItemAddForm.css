@@ -1,3 +1,7 @@
 .item-add-form{
     margin-top: 1rem;
 }
+.input-max-width{
+    max-width: 160px;
+    margin: 0 3px;
+}

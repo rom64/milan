@@ -1,8 +1,19 @@
-
+body{
+  background-image: url("../public/soccer.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+#root{
+  position: relative;
+}
 .team-app {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -60%);
   margin: 2rem auto  ;
   max-width: 800px;
-  min-width: 650px;
+  width: 800px;
   min-height: 360px;
   color: #ddd;
   background: url("../public/ac-milan.jpg") top center/ auto repeat-y;
@@ -11,3 +22,15 @@
 .top-panel {
   margin: 1rem 0;
 }
+@media (max-width:1200px) {
+  body{
+    background-size: unset;
+  }
+}
+@media (max-width: 800px){
+  .team-app{
+    position: static;
+    transform: none;
+  }
+}
+
