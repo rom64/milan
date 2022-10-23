@@ -32,5 +32,8 @@ body{
     position: static;
     transform: none;
   }
+  .alert-block{
+    position: absolute;
+  }
 }
 

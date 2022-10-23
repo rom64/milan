@@ -7,13 +7,14 @@ import ItemStatusFilter from "./components/ItemStatusFilter";
 import ItemAddForm from "./components/ItemAddForm";
 
 import './App.css';
+import { ContextProvider } from "./context";
 
 
 const App = () => {
     const [players, setPlayers] = useState([
         { label:'Mike Maignan', number: 16, important: true, injured: false, keeper: true, defender: false, midfielder: false, forward: false, id: 1 } ,
         { label:'Davide Calabria', number: 2, important: true, injured: false, keeper: false, defender: true, midfielder: false, forward: false, id: 2 } ,
-        { label:'Zlatan Ibrahimovic', number: 11, important: true, injured: false, keeper: false, defender: false, midfielder: false, forward: true, id: 3 } ,
+        { label:'Zlatan Ibrahimovic', number: 11, important: true, injured: true, keeper: false, defender: false, midfielder: false, forward: true, id: 3 } ,
         { label:'Sandro Tonali', number: 8, important: true, injured: false, keeper: false, defender: false, midfielder: true, forward: false, id: 4 } ,
         { label:'Rade Krunic', number: 33, important: false, injured: false, keeper: false, defender: false, midfielder: false, forward: false, id: 5 } ,
          ]);
@@ -140,7 +141,10 @@ const App = () => {
                       onToggleForward={ onToggleForward }
 
             />
-            <ItemAddForm onAdded={ addItem } />
+            <ContextProvider>
+                <ItemAddForm onAdded={ addItem } />
+            </ContextProvider>
+
         </div>
     );
 }
